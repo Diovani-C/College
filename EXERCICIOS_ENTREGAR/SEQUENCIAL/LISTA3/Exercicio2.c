@@ -12,10 +12,10 @@ int main()
   printf("Informe o valor do salario R$:\n");
   scanf("%f", &salario);
 
-  printf("Informe a porcentagem de aumento %%:\n");
+  printf("Informe a porcentagem de aumento (ex: 10 para 10%%) %%:\n");
   scanf("%f", &aumento);
 
-  printf("Informe a porcentagem de descontos %%:\n");
+  printf("Informe a porcentagem de descontos (ex: 5 para 5%%) %%:\n");
   scanf("%f", &desconto);
 
   salarioComAumento = salario + (salario * (aumento / 100));

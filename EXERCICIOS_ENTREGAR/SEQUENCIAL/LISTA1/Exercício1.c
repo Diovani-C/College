@@ -1,58 +1,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void ex01()
+int main()
 {
-  //   1) Escreva um algoritmo que leia o comprimento (cm), a largura (cm) e a altura (cm) de uma caixa retangular
-  // e calcule o seu volume (cm3), cuja fórmula é:
-  // Volume = Comprimento * Largura * Altura
-  int comp, larg, alt, vol;
+  // Ler um valor que representa o preço de um produto e imprimir esse valor com reajuste de x%. O percentual
+  // do reajuste é informado pelo usuário.
+  float precoProduto, precoProdutoReajustado, porcentagemReajuste;
 
-  printf("Exercicio 01:\n");
-  printf("Calculando o volume de uma caixa!\n");
+  printf("Reajuste do valor de um produto!\n");
 
-  printf("Comprimento da caixa:\n");
-  scanf("%d", &comp);
+  printf("Informe o valor do produto R$:\n");
+  scanf("%f", &precoProduto);
 
-  printf("Largura da caixa:\n");
-  scanf("%d", &larg);
+  printf("Informe a procentagem do reajuste %%:\n");
+  scanf("%f", &porcentagemReajuste);
 
-  printf("Altura da caixa:\n");
-  scanf("%d", &alt);
+  precoProdutoReajustado = precoProduto + (precoProduto * (porcentagemReajuste / 100));
 
-  vol = comp * larg * alt;
-
-  printf("O volume da caixa é %d \n", vol);
-}
-
-void ex02() {
-  
-}
-
-int main(void)
-{
-  char continuar = "s";
-  int exercicio;
-
-  while (continuar == "s")
-  {
-    printf("Escolha o exercicio que voce deseja rodar:\n");
-    printf("1, 2, 3 \n");
-    scanf("%d", &exercicio);
-    switch (exercicio)
-    {
-    case 1:
-      ex01();
-      break;
-
-    default:
-      printf("Exercicio inexistente!");
-      break;
-    }
-
-    printf("Deseja continuar? s/n \n");
-    scanf("%c", &continuar);
-  }
+  printf("O valor do produto reajustado é R$%1.2f \n", precoProdutoReajustado);
 
   return 0;
 }

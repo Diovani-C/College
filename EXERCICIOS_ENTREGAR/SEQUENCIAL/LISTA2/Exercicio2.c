@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main() {
-//   Elabore um programa que leia via teclado uma quantidade de segundos (tipo int) e transforme este tempo em dias, horas e minutos (as três últimas em tipo float).
+int main()
+{
+  //   Elabore um programa que leia via teclado uma quantidade de segundos (tipo int) e transforme este tempo em dias, horas e minutos (as três últimas em tipo float).
   int segundos;
   float dias, horas, minutos;
 

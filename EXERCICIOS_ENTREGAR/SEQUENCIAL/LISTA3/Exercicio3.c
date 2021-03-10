@@ -25,7 +25,6 @@ int main()
 
   quartoDigito = numero - digitosAnteriores;
 
-
   printf("Primeiro digito: %d\n", primeiroDigito);
 
   printf("Segundo digito: %d\n", segundoDigito);

@@ -18,6 +18,6 @@ int main()
   prestacaoComJuros = prestacao + (prestacao * (juros / 100));
 
   printf("A prestacao com juros ficara de R$%1.2f\n", prestacaoComJuros);
-  
+
   return 0;
 }

@@ -21,6 +21,5 @@ int main()
 
   printf("A media ponderada das avaliacoes é: %1.2f\n", mediaPonderada);
 
-
   return 0;
 }

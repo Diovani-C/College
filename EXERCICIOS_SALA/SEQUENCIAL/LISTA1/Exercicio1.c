@@ -3,8 +3,7 @@
 
 int main(void)
 {
-   //   1) Escreva um algoritmo que leia o comprimento (cm), a largura (cm) e a altura (cm) de uma caixa retangular
-  // e calcule o seu volume (cm3), cuja fórmula é:
+   //   1) Escreva um algoritmo que leia o comprimento (cm), a largura (cm) e a altura (cm) de uma caixa retangular e calcule o seu volume (cm3), cuja fórmula é:
   // Volume = Comprimento * Largura * Altura
   int comp, larg, alt, vol;
 

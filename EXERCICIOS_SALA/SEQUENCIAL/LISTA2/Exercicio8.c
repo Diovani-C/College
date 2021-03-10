@@ -3,8 +3,7 @@
 
 int main()
 {
-  //   Faça um programa que leia o salário bruto mensal de um funcionário, calcule e mostre os valores conforme o exemplo a seguir. Observação: É possível fazer esse programa utilizando somente três variáveis:
-  //  uma para ler o salário bruto, outra para os descontos e outra para o salário líquido.
+  //   Faça um programa que leia o salário bruto mensal de um funcionário, calcule e mostre os valores conforme o exemplo a seguir. Observação: É possível fazer esse programa utilizando somente três variáveis: uma para ler o salário bruto, outra para os descontos e outra para o salário líquido.
   float salarioBruto, salarioLiquido;
 
   printf("Descontando impostos do salario bruto!\n");

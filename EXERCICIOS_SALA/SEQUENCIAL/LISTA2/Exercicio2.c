@@ -3,9 +3,7 @@
 
 int main()
 {
-  //   O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem do distribuidor
-  // e a percentagem dos impostos (ambas aplicadas sobre o custo de fábrica). Escrever um programa para, a
-  // partir do custo de fábrica do carro, calcular e mostrar o custo ao consumidor.
+  //   O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem do distribuidor e a percentagem dos impostos (ambas aplicadas sobre o custo de fábrica). Escrever um programa para, a partir do custo de fábrica do carro, calcular e mostrar o custo ao consumidor.
   float custoFabrica, percentagemImpostos, percentagemDistribuidor, custoFinal;
 
   printf("Calcula o valor final de um carro baseado no valor da fabricacao, porcentagem de impostos e porcentagem do distribuidor\n");

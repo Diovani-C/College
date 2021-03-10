@@ -3,11 +3,7 @@
 
 int main()
 {
-  //   Ler a quantidade de kilowatts de energia elétrica consumidos por uma residência. Calcular e mostrar o
-  // valor em reais de cada kilowatts, o valor total a ser pago e valor a ser pago por essa residência quando há
-  // desconto de 10%. Considere que 100 kilowatts custam 1/7 do salário mínimo. Ler o valor do salário mínimo.
-  // Armazene em variáveis apenas o valor do salário mínimo, a quantidade de kilowatts gastos pela residência e
-  // o valor de um kilowatt.
+  //   Ler a quantidade de kilowatts de energia elétrica consumidos por uma residência. Calcular e mostrar o valor em reais de cada kilowatts, o valor total a ser pago e valor a ser pago por essa residência quando há desconto de 10%. Considere que 100 kilowatts custam 1/7 do salário mínimo. Ler o valor do salário mínimo. Armazene em variáveis apenas o valor do salário mínimo, a quantidade de kilowatts gastos pela residência e o valor de um kilowatt.
   float salarioMinimo, kilowattsGastos, valorPorKilowatt;
 
   printf("Calculando o valor gasto em energia para reais baseado no salario minimo, com e sem 10%% de desconto!\n");

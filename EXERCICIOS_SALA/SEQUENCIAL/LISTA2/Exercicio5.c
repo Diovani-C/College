@@ -3,9 +3,7 @@
 
 int main()
 {
-  //   Escreva um programa para ler o número de votos brancos, nulos (incluem eleitores ausentes) e válidos de
-  // uma eleição. Calcular e mostrar o percentual que cada um (brancos, nulos e válidos) representa em relação
-  // ao total de eleitores. Lembrar que os valores dos percentuais podem não ser inteiros
+  //   Escreva um programa para ler o número de votos brancos, nulos (incluem eleitores ausentes) e válidos de uma eleição. Calcular e mostrar o percentual que cada um (brancos, nulos e válidos) representa em relação ao total de eleitores. Lembrar que os valores dos percentuais podem não ser inteiros
   int votosValidos, votosNulos, votosBrancos;
   float totalVotos, percentualValido, percentualNulo, percentualBranco;
 

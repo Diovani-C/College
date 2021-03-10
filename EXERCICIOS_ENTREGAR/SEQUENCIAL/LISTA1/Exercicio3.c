@@ -3,8 +3,7 @@
 
 int main()
 {
-  //   Uma revendedora de carros usados paga aos seus funcionários vendedores um salário fixo por mês, mais
-  // uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por eles efetuadas.
+  //   Uma revendedora de carros usados paga aos seus funcionários vendedores um salário fixo por mês, mais uma comissão também fixa para cada carro vendido e mais 5% do valor das vendas por eles efetuadas.
   // Escrever um programa que receba os seguintes dados de um vendedor:
   // - Número de carros vendidos;
   // - Valor total das vendas realizadas;

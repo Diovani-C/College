@@ -4,8 +4,7 @@
 
 int main()
 {
-  //    Escreva um programa que leia dois valores que são o raio e a altura de um cilindro e calcule o seu volume,
-  // cuja fórmula é: Volume = 3.1415 * Raio² * Altura.
+  //    Escreva um programa que leia dois valores que são o raio e a altura de um cilindro e calcule o seu volume, cuja fórmula é: Volume = 3.1415 * Raio² * Altura.
   float raio, altura, volume;
 
   printf("Calculando o volume de um cilindro!\n");

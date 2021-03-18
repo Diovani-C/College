@@ -13,7 +13,8 @@ int main()
   // a) Se opcao = 1 escrever os três valores a, b e c em ordem crescente.
   // b) Se opcao = 2 escrever os três valores a, b e c em ordem decrescente.
   // c) Se opcao = 3 escrever se os valores a, b e c são múltiplos de 2.
-  int numero1, numero2, numero3, opcao, maior, medio, menor;
+  // Atenção: Neste programa você deverá usar somente as variáveis opcao, a, b e c, todas do tipo int.
+  int numero1, numero2, numero3, opcao;
 
   printf("Numero e opcoes, a vida!\n");
 
@@ -31,30 +32,61 @@ int main()
   printf("a) Se opcao = 1 escrever os três valores a, b e c em ordem crescente.\nb)Se opcao = 2 escrever os três valores a, b e c em ordem decrescente\nc)Se opcao = 3 escrever se os valores a, b e c são múltiplos de 2.\n");
   scanf("%d", &opcao);
 
-  if (opcao == 1 || opcao == 2)
-  {
-    medio = (numero1 + numero2 + (numero1 - numero2)) / 2;
-    maior = (maior + numero3 + (maior - numero3)) / 2;
-
-    if (maior - medio != 0)
-    {
-      menor = (numero1 + numero2) - medio;
-    }
-    else
-    {
-      menor = (numero1 + numero2) - maior;
-      medio = (menor + numero3 - (menor - numero3)) / 2;
-      menor = (menor + numero3) - medio;
-    }
-  }
-
   switch (opcao)
   {
   case 1:
-    printf("Os numeros em ordem crescente: %d, %d, %d\n", menor, medio, maior);
+    printf("Os numeros em ordem crescente:");
+    if (numero1 > numero2 && numero2 > numero3)
+    {
+      printf("%d, %d, %d \n", numero3, numero2, numero1);
+    }
+    else if (numero2 > numero1 && numero2 > numero3)
+    {
+      printf("%d, %d, %d \n", numero3, numero1, numero2);
+    }
+    else if (numero3 > numero1 && numero1 > numero2)
+    {
+      printf("%d, %d, %d \n", numero2, numero1, numero3);
+    }
+    else if (numero1 > numero3 && numero3 > numero2)
+    {
+      printf("%d, %d, %d \n", numero2, numero3, numero1);
+    }
+    else if (numero3 > numero2 && numero2 > numero1)
+    {
+      printf("%d, %d, %d \n", numero1, numero2, numero3);
+    }
+    else
+    {
+      printf("%d, %d, %d \n", numero1, numero3, numero2);
+    }
     break;
   case 2:
-    printf("Os numeros em ordem decrescente: %d, %d, %d\n", maior, medio, menor);
+    printf("Os numeros em ordem decrescente:");
+    if (numero1 > numero2 && numero2 > numero3)
+    {
+      printf("%d, %d, %d \n", numero1, numero2, numero3);
+    }
+    else if (numero2 > numero1 && numero2 > numero3)
+    {
+      printf("%d, %d, %d \n", numero2, numero1, numero3);
+    }
+    else if (numero3 > numero1 && numero1 > numero2)
+    {
+      printf("%d, %d, %d \n", numero3, numero1, numero2);
+    }
+    else if (numero1 > numero3 && numero3 > numero2)
+    {
+      printf("%d, %d, %d \n", numero1, numero3, numero2);
+    }
+    else if (numero3 > numero2 && numero2 > numero1)
+    {
+      printf("%d, %d, %d \n", numero3, numero2, numero1);
+    }
+    else
+    {
+      printf("%d, %d, %d \n", numero2, numero3, numero1);
+    }
     break;
   case 3:
     if (numero1 % 2 == 0)

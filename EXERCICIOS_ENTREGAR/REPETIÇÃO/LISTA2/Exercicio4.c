@@ -4,7 +4,8 @@
 
 int main()
 {
-  int i, mediaPar3 = 0, divPar3 = 0;
+  int i, divPar3 = 0;
+  float mediaPar3 = 0;
 
   printf("Numeros impares e divisíveis por 7 entre 500 e 0 em ordem decrescente\n");
 
@@ -27,9 +28,9 @@ int main()
     }
   }
 
-  mediaPar3 /= divPar3;
+  mediaPar3 /= (float)divPar3;
 
-  printf("A media dos pares e divisíveis por 3 desse intervalo: %d\n", mediaPar3);
+  printf("A media dos pares e divisíveis por 3 desse intervalo: %1.2f\n", mediaPar3);
 
   return 0;
 }

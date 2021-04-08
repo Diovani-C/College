@@ -7,6 +7,8 @@ int main()
   int vogaisQuantidade = 0, i, total = 0;
   char caractere, vogais[] = {'a', 'e', 'i', 'o', 'u'};
 
+  printf("Valendo R$500 uma letra!\n");
+
   while (1)
   {
 

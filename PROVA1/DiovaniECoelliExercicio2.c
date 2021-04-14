@@ -13,43 +13,51 @@
 int main()
 {
   int quantidadeChar, i, j, divisivel, ascii;
-  char letra;
+  char letra, continuar;
 
-  printf("Informe a quantidade de letras no seu nome");
-  scanf(" %d", &quantidadeChar);
-
-  // faz um loop no valor informado e pede pelas letras do nome
-  for (i = 0; i < quantidadeChar; i++)
+  do
   {
-    printf("Informe uma letra\n");
-    scanf(" %c", &letra);
 
-    // transforma letra em ascii
-    ascii = letra;
+    printf("Informe a quantidade de letras no seu nome");
+    scanf(" %d", &quantidadeChar);
 
-    // inicia a variavel divisivel em cada loop
-    divisivel = 0;
-
-    // faz um loop por todos os numeros inteiros menores que o valor de ascii e se for divisivel incremente a variavel divisivel
-    for (j = 1; j < ascii; j++)
+    // faz um loop no valor informado e pede pelas letras do nome
+    for (i = 0; i < quantidadeChar; i++)
     {
-      if (ascii % j == 0)
+      printf("Informe uma letra\n");
+      scanf(" %c", &letra);
+
+      // transforma letra em ascii
+      ascii = letra;
+
+      // inicia a variavel divisivel em cada loop
+      divisivel = 0;
+
+      // faz um loop por todos os numeros inteiros menores que o valor de ascii e se for divisivel incremente a variavel divisivel
+      for (j = 1; j < ascii; j++)
       {
-        divisivel += 1;
+        if (ascii % j == 0)
+        {
+          divisivel += 1;
+        }
+      }
+
+      printf("%c - %d na tabela ASCII ", letra, ascii);
+
+      // verifica se o numero e ou nao primo
+      if (divisivel <= 1)
+      {
+        printf("eh primo\n");
+      }
+      else
+      {
+        printf("nao e primo\n");
       }
     }
 
-    printf("%c - %d na tabela ASCII ", letra, ascii);
+    printf("Deseja continuar S/N");
+    scanf(" %c", &continuar);
 
-    // verifica se o numero e ou nao primo
-    if (divisivel <= 1)
-    {
-      printf("eh primo\n");
-    }
-    else
-    {
-      printf("nao e primo\n");
-    }
-  }
+  } while (continuar == 'S');
   return 0;
 }

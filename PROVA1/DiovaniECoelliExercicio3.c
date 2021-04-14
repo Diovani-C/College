@@ -5,8 +5,10 @@
 
 int main()
 {
-  int limiteInferior, limiteSuperior, i;
-  float quadrado, resto, mediaRaiz;
+  int limiteInferior, limiteSuperior, i, contadorMedia = 0;
+  float quadrado, resto, mediaRaiz = 0;
+
+  printf("Mostrando quadrados perfeitos em um intervalo\n");
 
   // loop infinito
   while (1)
@@ -18,7 +20,7 @@ int main()
     scanf("%d", &limiteSuperior);
 
     // verificando se os limite sao positivos e se o inferio e menor que o superior
-    if (limiteSuperior <= 0 || limiteInferior <= 0)
+    if (limiteSuperior < 0 || limiteInferior < 0)
     {
       printf("Ambos os limites precisam ser positivo!\n");
     }
@@ -32,21 +34,33 @@ int main()
     }
   }
 
-  for(i = limiteInferior; i <= limiteSuperior; i++){
+// obtendo o quandrado do limtie superior
+  limiteSuperior *= limiteSuperior;
+
+  for (i = limiteInferior; i <= limiteSuperior; i++)
+  {
     // inicializa a variavel resto com 0 todo loop
     resto = 0;
 
     // verifica se o quadrado do numero atual e perfeito
     quadrado = sqrt((double)i);
-
     resto = quadrado - (int)quadrado;
 
-    if ( resto == 0){
-      printf("%1.0f (raiz %d)\n", quadrado, i);
-    }
-      
+    // se a raiz for um numero inteiro imprime o numero na tela
+    if (resto == 0)
+    {
+      printf("%d (raiz %1.0f)\n", i, quadrado);
 
+      // soma a media das raizes
+      mediaRaiz += quadrado;
+      contadorMedia += 1;
+    }
   }
+
+  // divide a soma da media pela quantidade i items
+  mediaRaiz /= contadorMedia;
+
+  printf("A media das raizes dos quadrados perfeitos eh %1.2f\n", mediaRaiz);
 
   return 0;
 }

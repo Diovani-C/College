@@ -128,7 +128,7 @@ int main()
       scanf("%d", &limiteSuperior);
 
       // verificando se os limite sao positivos e se o inferio e menor que o superior
-      if (limiteSuperior <= 0 || limiteInferior <= 0)
+      if (limiteSuperior < 0 || limiteInferior < 0)
       {
         printf("Ambos os limites precisam ser positivo!\n");
       }

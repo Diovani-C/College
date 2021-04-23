@@ -1,22 +1,24 @@
 #include <stdio.h>
-#include <math.h>
 #include <ctype.h>
 
-// 3) Fazer uma função que verifica se um número é um quadrado perfeito. Um número é quadrado perfeito se
-// possui como raiz quadrada um valor inteiro. A função para obter a raiz quadrada é sqrt() e está na biblioteca math.h. Por exemplo, 25 é um quadrado perfeito porque raiz quadrada de 25 é 5. Utilizar essa função para:
-// a) Verificar se um número, informado pelo usuário, é um quadrado perfeito.
-// b) Mostrar quais números de um intervalo são quadrados perfeitos.
+// 4) Elaborar uma função que verifica se um número é palíndromo. Um número é palíndromo quando ele não muda se lido da esquerda para a direita ou da direita para a esquerda. Por exemplo, 2112 é palíndromo.
+// Elaborar uma função que verifica se um número, que contenha entre 2 e 9 dígitos, é palíndromo. Utilizar essa função para:
+// a) Verificar se um número informado pelo usuário é palíndromo.
+// b) Apresentar os números palíndromos que pertencem a um intervalo informado pelo usuário.
 // Use menu de opções (com switch-case) e implemente a repetição de programa.
 
-int quadradoPerfeito(int numero)
+int palindrome(int numero)
 {
-  int raizInteiro;
-  float raiz;
+  int reverso = 0, digito, copia = numero;
+  // cira um numero reverso e compara
+  do
+  {
+    digito = copia % 10;
+    reverso = (reverso * 10) + digito;
+    copia /= 10;
+  } while (copia != 0);
 
-  raiz = sqrt((float)numero);
-  raizInteiro = raiz;
-
-  return (raizInteiro - raiz == 0);
+  return reverso == numero;
 }
 
 char lerEntreDoisChar(char valor1, char valor2)
@@ -50,29 +52,25 @@ int trocarPosicao(int *numero1, int *numero2)
 
 int main()
 {
+  int option, numero, limiteInferior, limiteSuperior, i;
   char continuar;
-  int opcao, numero, limiteInferior, limiteSuperior, i;
 
   while (1)
   {
-    printf("1- Verificar se um número, informado pelo usuário, é um quadrado perfeito.\n2- Mostrar quais números de um intervalo são quadrados perfeitos.\n");
-    scanf("%d", &opcao);
+    printf("1- Verificar se um número é palíndromo.\n2- Apresentar os números palíndromos que pertencem a um intervalo.\n");
+    scanf("%d", &option);
 
-    switch (opcao)
+    switch (option)
     {
     case 1:
       printf("Informe um numero: ");
       scanf("%d", &numero);
 
-      if (quadradoPerfeito(numero))
-      {
-        printf("%d eh um quadrado perfeito => raiz quadrada de %d eh %1.0f\n", numero, numero, sqrt((float)numero));
+      if(palindrome(numero)) {
+        printf("O numero %d e um palindromoe!\n", numero);
+      } else {
+        printf ("O numero %d nao eh um palindrome!\n", numero);
       }
-      else
-      {
-        printf("O numero informado nao eh um quadrado perfeito!\n");
-      }
-
       break;
 
     case 2:
@@ -89,9 +87,9 @@ int main()
 
       for (i = limiteInferior; i <= limiteSuperior; i++)
       {
-        if (quadradoPerfeito(i))
+        if (palindrome(i))
         {
-          printf("%2d eh um quadrado perfeito => raiz quadrada de %2d eh %1.0f\n", i, i, sqrt((float)i));
+          printf("%d\n", i);
         }
       }
       break;

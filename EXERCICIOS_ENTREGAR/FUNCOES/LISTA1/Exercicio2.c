@@ -19,7 +19,6 @@ int main()
 
   do
   {
-
     printf("Informe um valor em centimetro:");
     scanf("%d", &centimetros);
 

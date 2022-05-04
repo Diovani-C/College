@@ -1,0 +1,29 @@
+{
+  "id" : "org.flatpak.rcssmonitor",
+  "runtime" : "org.kde.Platform",
+  "runtime-version" : "5.15",
+  "runtime-commit" : "2c9e014e7d60da0f002c9d9d7a620bcedf59546007a7ae16accb3ee3e6335430",
+  "sdk" : "org.kde.Sdk",
+  "sdk-commit" : "daaa2b567c658f2dfbb082cc306298b74a71b06336e79dcbd8df94cb014b6a95",
+  "command" : "rcssmonitor",
+  "modules" : [
+    {
+      "name" : "rcssmonitor",
+      "buildsystem" : "autotools",
+      "sources" : [
+        {
+          "url" : "https://github.com/rcsoccersim/rcssmonitor/releases/download/rcssmonitor-17.0.0/rcssmonitor-17.0.0.tar.gz",
+          "sha256" : "c64b42f42bde6a374ea7295f540910fe9f428d5da4de0837a09ff498f13b25e0",
+          "type" : "archive"
+        }
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--filesystem=host",
+    "--device=dri"
+  ]
+}

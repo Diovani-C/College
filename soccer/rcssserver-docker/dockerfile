@@ -1,0 +1,34 @@
+# Get the base Ubuntu image from Docker Hub
+FROM debian:latest
+
+# Update apps on the base image
+RUN apt-get update -y && apt-get install -y
+
+# Install dependencies
+RUN apt-get -y install build-essential automake autoconf libtool flex bison libboost-all-dev tar wget
+
+# Set the timezone
+ENV TZ=America/Campo_Grande
+
+# Create tz file
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Expose the default server port
+EXPOSE 6000-7000/udp
+
+RUN mkdir /rcssserver
+
+# Download files and stract to /rcssserver
+RUN wget -O - https://github.com/rcsoccersim/rcssserver/releases/download/rcssserver-17.0.1/rcssserver-17.0.1.tar.gz | tar xzvp -C /rcssserver --strip-components 1
+
+# Specify the working directory
+WORKDIR /rcssserver
+
+# Run config file
+RUN ./configure
+
+# Build the application
+RUN make
+
+# Run the output program from the previous step
+CMD ["./src/rcssserver"]

@@ -1,0 +1,1 @@
+if (numero_movimentacoes < tamanho_fila(carros_pupunha))

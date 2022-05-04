@@ -1,0 +1,22 @@
+[Application]
+name=org.flatpak.rcssmonitor
+runtime=org.kde.Platform/x86_64/5.15
+sdk=org.kde.Sdk/x86_64/5.15
+command=rcssmonitor
+
+[Context]
+shared=ipc;
+sockets=x11;wayland;
+devices=dri;
+filesystems=xdg-config/kdeglobals:ro;host;
+
+[Session Bus Policy]
+com.canonical.AppMenu.Registrar=talk
+
+[Extension org.flatpak.rcssmonitor.Debug]
+directory=lib/debug
+autodelete=true
+no-autodownload=true
+
+[Build]
+built-extensions=org.flatpak.rcssmonitor.Debug;

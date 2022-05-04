@@ -1,0 +1,19 @@
+app-id: org.flatpak.rcssmonitor
+runtime: org.kde.Platform
+runtime-version: "5.15"
+sdk: org.kde.Sdk
+command: rcssmonitor
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  - --socket=wayland
+  - --filesystem=host
+  - --device=dri
+  - --share=network
+modules:
+  - name: rcssmonitor
+    buildsystem: autotools
+    sources:
+      - type: archive
+        url: https://github.com/rcsoccersim/rcssmonitor/releases/download/rcssmonitor-17.0.0/rcssmonitor-17.0.0.tar.gz
+        sha256: c64b42f42bde6a374ea7295f540910fe9f428d5da4de0837a09ff498f13b25e0
